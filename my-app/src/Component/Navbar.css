@@ -1,0 +1,18 @@
+.navbar {
+    border: 0px none;
+    height: 73px;
+    width: 1440px;
+    }
+ .navbar .rectangle {
+    background-color: #007CC2;
+    height: 73px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 1440px;
+    }
+img{
+    width: 12%;
+    margin-top: 15px;
+    margin-left: 20px;
+}
