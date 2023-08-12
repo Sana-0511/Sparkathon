@@ -10,13 +10,8 @@ function App() {
     <div>
       <Navbar />
       <div className='container'>
-        <div>
           <Map/>
-        </div>
-        <div>
           <List />
-        </div>
-
       </div>
     </div>
   );

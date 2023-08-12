@@ -1,9 +1,11 @@
+import './Map.css';
+
 import React from "react";
 const Map= () =>{
     return (
-    <div>
-        <img src="floor-map.png"></img>
-    </div>
+    <>
+        <img src="/floor-map.png" alt="" className="image"/>
+    </>
     );
   }
   export default Map;

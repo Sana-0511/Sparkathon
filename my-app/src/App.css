@@ -40,6 +40,5 @@
 .container{
   display: flex;
   direction: row;
-  margin: auto;
-
+  width: 1400px;
 }
