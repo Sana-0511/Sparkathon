@@ -3,6 +3,7 @@ import Navbar from './Component/Navbar';
 import List from './Component/List';
 import Map from './Component/Map';
 import './App.css';
+import Splinemap from './Component/Splinemap';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <div>
       <Navbar />
       <div className='container'>
-        <div><Map/></div>
+        <div><Splinemap/></div>
         <div><List /></div>
           
       </div>
