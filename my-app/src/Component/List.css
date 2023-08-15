@@ -15,19 +15,23 @@ body {
   background-color: #f7f7f7;
   min-height: 100vh;
   max-width: 50rem;
-  margin: auto;
+  
   padding: 2rem 0;
   color: #36454f;
   font-size: 1.5rem;
 }
 
+.app{
+  margin: 30px;
+  min-width: 400px;
+}
 .mt-20 {
   margin-top: 2rem;
 }
 
 .border-bottom {
   border-bottom: 1px dotted #36454f;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 h1 {
@@ -36,8 +40,8 @@ h1 {
 }
 
 input {
-  width: 100%;
-  font-size: 1.8rem;
+  width: 75%;
+  font-size: 1.7rem;
   margin-bottom: 2rem;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -49,6 +53,7 @@ input {
 button {
   border: none;
   width: auto;
+  margin-left: 10px;
   background: transparent;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
@@ -69,7 +74,7 @@ button {
 .items li {
   display: flex;
   justify-content: space-between;
-  width: 45%;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 1rem 1.5rem;

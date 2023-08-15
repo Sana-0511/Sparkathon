@@ -60,7 +60,7 @@ function AddItem({ onAddItem }) {
     <div className="border-bottom">
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Enter Item" value={item} onChange={e => setItem(e.target.value)} />
-        <button className="btn">Add Item</button>
+        <button className="btn">+</button>
       </form>
     </div>
   )
@@ -71,7 +71,7 @@ function Items({ items, onDeleteItem }) {
   return (
     <ul className="items">
       {items.map(i => (
-        <li key={i.id}>{i.item} <button onClick={() => onDeleteItem(i.id)}>❌</button></li>
+        <li key={i.id}>{i.item} <button><img src="https://www.freeiconspng.com/thumbs/location-icon-png/blue-location-icon-26.png"></img></button><button onClick={() => onDeleteItem(i.id)}>❌</button></li>
       ))}
     </ul>
   )
