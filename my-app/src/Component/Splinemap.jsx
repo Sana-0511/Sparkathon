@@ -1,4 +1,5 @@
 import Spline from '@splinetool/react-spline';
+import './Map.css';
 
 export default function App() {
   return (
