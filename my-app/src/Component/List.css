@@ -31,14 +31,15 @@ body {
 }
 
 .border-bottom {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
+  /* border-bottom: 1px solid #ccc; */
+  /* padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem; */
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 27px;
   margin-bottom: 2rem;
+  color: rgb(23, 94, 182);
 }
 
 .form{
@@ -47,11 +48,13 @@ h1 {
 }
 
 input {
-  width: 100%;
-  font-size: 1.8rem;
-  padding: 1.2rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 80%;
+  margin-right: 10px;
+  font-size: 15px;
+  height: 40px;
+  padding: 1rem;
+  border: 1px solid #9dd7fd;
+  border-radius: 10px;
   outline: none;
   font-family: "Poppins", sans-serif;
 }
@@ -61,34 +64,94 @@ button {
   background: transparent;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .btn {
-  background-color: #0074ba;
+  background-color: #0080e8;
   color: #fff;
+  height: 40px;
   border-radius: 5px;
-  padding: 1.2rem 2rem;
-  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
 }
 
 .items {
-  display: flex;
-  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+  width: 95%;
+  border-radius: 10px;
 }
 
 .items li {
   display: flex;
   justify-content: space-between;
-  width: calc(50% - 1rem);
-  border: 1px solid #ccc;
+  align-items: center;
+  border: 1px solid rgb(231, 228, 228);
+  height: 35px;
+  background-color: #e7e7e7;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.items .ticked {
+  background-color: rgba(93, 187, 255, 0.3); /* Transparent green */
+}
+.items li .item-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.items li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+.items li .tick-button {
+  font-size: 1.5rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid grey;
+  background-color: transparent;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
   border-radius: 5px;
-  padding: 1.5rem 2rem;
-  margin-top: 1.5rem;
-  margin-right: 1rem;
   font-weight: 700;
   cursor: pointer;
   text-transform: capitalize;
+  transition: background-color 0.3s; /* Add transition for smoother effect */
+}
+
+.list-item.selected {
+  background-color: rgba(0, 0, 255, 0.2); /* Apply transparent blue to selected items */
+}
+
+.list-item .item-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.list-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+.list-item .tick-button {
+  font-size: 1.5rem;
 }
 
 .suggestions {

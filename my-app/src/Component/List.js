@@ -24,6 +24,7 @@ export default function List() {
     setSuggestions(filteredSuggestions);
   }
 
+  
   function handleDeleteItem(id) {
     setItems(items => items.filter(item => item.id !== id));
   }
@@ -33,11 +34,22 @@ export default function List() {
     if (deleteItems) setItems([]);
   }
 
+  function handleTickItem(id) {
+    setItems(items =>
+      items.map(item => {
+        if (item.id === id) {
+          return { ...item, ticked: !item.ticked };
+        }
+        return item;
+      })
+    );
+  }
+
   return (
     <div className="app">
       <Header />
       <AddItem onAddItem={handleAddItem} handleSearch={handleSearch} suggestions={suggestions} />
-      <Items items={items} onDeleteItem={handleDeleteItem} />
+      <Items items={items} onDeleteItem={handleDeleteItem} onTickItem={handleTickItem} />
       {items.length > 0 && (
         <button onClick={handleClearAll} className="btn mt-20">
           Clear All
@@ -48,7 +60,7 @@ export default function List() {
 }
 
 function Header() {
-  return <h1 className="border-bottom">🛍 Shopping List</h1>;
+  return <h1 className="border-bottom">🛒 Shopping List</h1>;
 }
 
 function AddItem({ onAddItem, handleSearch, suggestions }) {
@@ -92,14 +104,19 @@ function AddItem({ onAddItem, handleSearch, suggestions }) {
   );
 }
 
-function Items({ items, onDeleteItem }) {
+function Items({ items, onDeleteItem, onTickItem }) {
   return (
     <ul className="items">
       {items.map(item => (
-        <li key={item.id}>
-          {item.name} <button onClick={() => onDeleteItem(item.id)}>❌</button>
+        <li key={item.id} className={item.ticked ? 'ticked' : ''}>
+          {item.name} 
+          <div className="item-buttons">
+            <button onClick={() => onDeleteItem(item.id)}>❌</button>
+            <button className="tick-button" onClick={() => onTickItem(item.id)}>✔️</button>
+          </div>
         </li>
       ))}
     </ul>
   );
 }
+

@@ -3,6 +3,9 @@ import './Map.css';
 
 export default function App() {
   return (
-    <Spline scene="https://prod.spline.design/Fn0ntRfYnxwFKFbT/scene.splinecode" />
+    <div className='image'>
+      <Spline scene="https://prod.spline.design/Fn0ntRfYnxwFKFbT/scene.splinecode" />
+    </div>
+    
   );
 }
