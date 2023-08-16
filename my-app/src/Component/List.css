@@ -13,37 +13,43 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f7f7f7;
-  min-height: 100vh;
-  max-width: 50rem;
-  
-  padding: 2rem 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 2rem 1rem;
   color: #36454f;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
-.app{
-  margin: 30px;
-  min-width: 400px;
+.app {
+  margin: 2rem;
+  min-width: 40rem;
 }
+
 .mt-20 {
   margin-top: 2rem;
 }
 
 .border-bottom {
-  border-bottom: 1px dotted #36454f;
-  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 2rem;
 }
 
+.form{
+  display: flex;
+  flex-direction: row;
+}
+
 input {
-  width: 75%;
-  font-size: 1.7rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1.2rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
@@ -52,18 +58,18 @@ input {
 
 button {
   border: none;
-  width: auto;
-  margin-left: 10px;
   background: transparent;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
 }
 
 .btn {
   background-color: #0074ba;
   color: #fff;
   border-radius: 5px;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem;
 }
 
 .items {
@@ -74,13 +80,35 @@ button {
 .items li {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: calc(50% - 1rem);
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 1rem 1.5rem;
-  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  margin-top: 1.5rem;
   margin-right: 1rem;
   font-weight: 700;
   cursor: pointer;
   text-transform: capitalize;
+}
+
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.suggestions li {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
 }
